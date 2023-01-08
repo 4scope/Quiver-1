@@ -1,0 +1,335 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --body: #000000;
+    --body2: #8331b4;
+    --white: #fff;
+    --pink: #fe3b6f;
+}
+
+body{
+    background-color: var(--body);
+    scroll-behavior: smooth;
+}
+
+/* ------------------------nav start----------------------*/
+
+
+
+/* -------------------nav end----------------------------- */
+
+/* -------------------------Hero section----------------------------- */
+
+.hero{
+    background: var(--body);
+    padding: 200px 0;
+    background-image: url('../img/log.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.hero__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero__heading{
+    font-size: 100px;
+    margin-bottom: 24px;
+    color: var(--white);
+}
+
+.hero__heading span{
+    /* this still has a special design thats why didn't use variable methoth
+    because it wont' be repeated */
+    background: #8331b4;
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #8338b4);
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #8338b4);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-size: 100%;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.hero__discription{
+    font-size: 45px;
+    color: #7d6db1;
+    background-size: 100%;
+    
+    font-weight: 900;
+}
+
+.highlight{
+    border-bottom: 4px solid rgb(132, 0, 255);
+}
+
+@media only screen and (max-width: 768px){
+    .hero{
+        margin-top: 30px;
+        padding-top: 250px;
+        height: 100vh;
+    }
+    .hero__heading{
+        font-size: 50px;
+    }
+    .hero span{
+        font-size: 15px;
+    }
+    
+    .hero__discription{
+        font-size: 20px;
+    }
+    .main__btn{
+        height: fit-content;
+        width: fit-content;
+    }
+}
+
+
+/* --------------------------About section---------------------------- */
+
+.main{
+    background-color: #131313;
+    padding: 10rem 0;
+}
+
+.main__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content{
+    color: #fff;
+    width: 100%;
+    gap: 1rem;
+}
+
+.main__content h1{
+    font-size: 2rem;
+    color: var(--body2);
+    margin-bottom: 32px;
+    font-weight: 900;
+}
+
+.main__content h2{
+    font-size: 4rem;
+    color: var(--pink);
+    background-size: 100%;
+}
+
+.main__content p{
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.main__btn{
+    font-size: 1.8rem;
+    background: var(--body2);
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    color: var(--white);
+    z-index: 100;
+}
+
+
+.main__btn a{
+    position: relative;
+    z-index: 9;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.main__btn:after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--pink);
+    transition: all 0.35s;
+    border-radius: 4px;
+    z-index: -10;
+}
+
+.main__btn:hover{
+    color: #fff;
+}
+
+.main__btn:hover:after{
+    width: 100%;
+}
+
+.main__img--container{
+    text-align: center;
+}
+
+.main__img--card{
+    margin: 10px;
+    height: 500px;
+    width: 500px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    /* background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%); */
+}
+
+.fa-layer-group, .fa-users{
+    font-size: 15rem;
+}
+
+/* #card-2{
+    background: #ff512f;
+    background: -webkit-linear-gradient(to right, #dd2476, #ff512f);
+    background: linear-gradient(to right, #dd2476, #ff512f);
+} */
+
+/* ------------------mobile responsive--------------------- */
+
+@media only screen and (max-width: 1100px){
+    .main{
+        padding: 3rem;
+    }
+    .main__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90%;
+    }
+
+    .main__img--container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__img--card{
+        height: 425px;
+        width: 425px;
+    }
+
+    .main__content{
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main__content h1{
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2{
+        font-size: 3rem;
+    }
+
+    .main__content p{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .main__img--card{
+        width: 250px;
+        height: 250px;
+        align-items: center;
+    }
+
+    .fa-user, .fa-layer-group{
+        font-size: 4rem;
+    }
+
+    .main__content h1{
+        font-size: 2rem;
+        margin-top: 3rem;
+
+    }
+
+    .main__content h2{
+        font-size: 2rem;
+    }
+
+    .main__content p{
+        margin-top: 2rem;
+        font-size: 10px;
+    }
+
+    .main__btn{
+        padding: 10px 25px;
+        margin: 2.5rem 0;
+
+    }
+    .main__btn a{
+        font-size: 15px;
+    }
+}
+
+/* --------------------services section----------------------- */
+
+.services{
+    background: #131313;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0;
+}
+
+.services h1{
+    color: var(--pink);
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+}
+
+/* ========================feature section==================== */
+
+.future{
+    background-color: var(--body);
+    background-image: url('../img/register.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* ========================feature section==================== */
+
+
+
+/* ----------------------------Footer section------------------------------------ */
